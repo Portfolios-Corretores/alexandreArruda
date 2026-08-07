@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Syne", sans-serif;
+  --font-sans: "Outfit", sans-serif;
+  --color-brand: #2575d2;
+  --color-brand-dark: #1a5fad;
+  --color-ink: #0c1222;
+  --color-muted: #6b7280;
+  --color-soft: #e8f1fb;
+  --color-dot: #c5d0de;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-mask-in {
+  from {
+    opacity: 0;
+    transform: scale(1.06) rotate(-2deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes blob-float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(12px, -18px) scale(1.04);
+  }
+}
+
+@keyframes dots-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Organic mask inspired by the reference hero */
+.hero-mask {
+  clip-path: url(#hero-organic);
+  -webkit-clip-path: url(#hero-organic);
+}
+
+@supports not (clip-path: url(#hero-organic)) {
+  .hero-mask {
+    border-radius: 58% 42% 48% 52% / 42% 48% 52% 58%;
+    transform: rotate(-4deg) scale(1.04);
+  }
+}
