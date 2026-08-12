@@ -57,7 +57,7 @@ export default function Depoimentos() {
         <ul className="mt-14 grid gap-6 md:grid-cols-3 md:gap-7">
           {depoimentos.map((item) => (
             <li key={item.id}>
-              <article className="group relative flex min-h-[28rem] flex-col justify-end overflow-hidden rounded-[1.75rem] sm:min-h-[30rem]">
+              <article className="group relative flex min-h-112 flex-col justify-end overflow-hidden rounded-[1.75rem] sm:min-h-120">
                 <img
                   src={item.imagem}
                   alt={`Entrega das chaves — ${item.nomes}`}
@@ -65,7 +65,7 @@ export default function Depoimentos() {
                   loading="lazy"
                 />
                 <div
-                  className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/55 to-ink/15"
+                  className="absolute inset-0 bg-linear-to-t from-ink/90 via-ink/55 to-ink/15"
                   aria-hidden
                 />
 

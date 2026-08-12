@@ -27,7 +27,7 @@ export default function About() {
               alt="Alexandre Arruda, corretor de imóveis"
               className="aspect-4/5 w-full object-cover object-top"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/25 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-ink/25 via-transparent to-transparent" />
           </div>
         </div>
 
