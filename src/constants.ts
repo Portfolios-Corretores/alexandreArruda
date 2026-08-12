@@ -1,11 +1,12 @@
-export const WHATSAPP_NUMBER = "5500000000000";
+export const WHATSAPP_NUMBER = "558179102322";
 
 export const WHATSAPP_URL =
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    "Olá, gostaria de falar com o Felipe Conrado.",
+    "Olá, gostaria de falar com o Alexandre Arruda.",
   )}`;
 
-export const INSTAGRAM_URL = "https://www.instagram.com/";
+export const INSTAGRAM_URL =
+  "https://www.instagram.com/alexandre_corretormcmv/";
 
-export const EMAIL = "contato@felipeconrado.com.br";
+export const EMAIL = "contato@alexandrearruda.com.br";
 export const EMAIL_URL = `mailto:${EMAIL}`;

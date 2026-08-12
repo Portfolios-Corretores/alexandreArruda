@@ -35,12 +35,14 @@ const initialForm: FormState = {
 
 function montarMensagem(data: FormState) {
   return [
-    "Olá, Felipe! Gostaria de agendar uma consultoria.",
+    "Olá, Alexandre! Gostaria de agendar uma consultoria.",
     "",
     `*Nome:* ${data.nome}`,
     `*Interesse em comprar em:* ${data.interesse}`,
     `*Renda média:* ${data.renda}`,
     `*Estado civil:* ${data.estadoCivil}`,
+    "",
+    "Vim direcionado da sua leading page.",
   ].join("\n");
 }
 

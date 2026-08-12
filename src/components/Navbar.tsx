@@ -6,7 +6,6 @@ import { WHATSAPP_URL } from "../constants";
 const navLinks = [
   { label: "Sobre", href: "#sobre" },
   { label: "Imóveis", href: "#imoveis" },
-  { label: "Serviços", href: "#servicos" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "Contato", href: "#contato" },
 ];
@@ -34,19 +33,19 @@ export default function Navbar() {
         <a
           href="#"
           className={`relative z-40 flex flex-col leading-tight transition-colors ${
-            scrolled || menuOpen ? "text-ink" : "text-white xl:text-ink"
+            scrolled || menuOpen ? "text-ink" : "text-white"
           }`}
           style={{ animation: "hero-rise 0.8s ease both" }}
         >
           <span className="font-display text-lg font-bold tracking-tight md:text-xl">
-            Felipe Conrado
+            Alexandre Arruda
           </span>
           <span
             className={`text-[11px] font-semibold uppercase tracking-[0.14em] ${
-              scrolled || menuOpen ? "text-muted" : "text-white/70 xl:text-muted"
+              scrolled || menuOpen ? "text-muted" : "text-white/70"
             }`}
           >
-            CRESCI 00000
+            CRECI 21679
           </span>
         </a>
 
@@ -59,7 +58,11 @@ export default function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-xs font-semibold uppercase tracking-[0.18em] text-ink/80 transition hover:text-ink"
+                  className={`text-xs font-semibold uppercase tracking-[0.18em] transition ${
+                    scrolled
+                      ? "text-ink/80 hover:text-ink"
+                      : "text-white/85 hover:text-white"
+                  }`}
                 >
                   {link.label}
                 </a>

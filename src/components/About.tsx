@@ -1,5 +1,8 @@
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { INSTAGRAM_URL, WHATSAPP_URL } from "../constants";
+
 const ABOUT_IMAGE =
-  "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80";
+  "https://res.cloudinary.com/dkgjwrjpv/image/upload/v1786564824/fotoAlexandre_yliizt.jpg";
 
 export default function About() {
   return (
@@ -21,10 +24,10 @@ export default function About() {
           <div className="relative overflow-hidden rounded-4xl">
             <img
               src={ABOUT_IMAGE}
-              alt="Felipe Conrado, corretor de imóveis"
+              alt="Alexandre Arruda, corretor de imóveis"
               className="aspect-4/5 w-full object-cover object-top"
             />
-            <div className="absolute inset-0 bg-lienar-to-t from-ink/25 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/25 via-transparent to-transparent" />
           </div>
         </div>
 
@@ -39,15 +42,42 @@ export default function About() {
 
           <div className="mt-6 space-y-4 text-base leading-relaxed text-muted md:text-lg">
             <p>
-              Com experiência no mercado imobiliário, Felipe Conrado atua com
-              foco em escuta, clareza e acompanhamento próximo em cada etapa da
-              negociação — da primeira visita até a assinatura.
+              Há 3 anos, atuo no mercado imobiliário ajudando pessoas a
+              encontrarem o imóvel certo para cada momento de suas vidas.
             </p>
             <p>
-              Seu trabalho une visão estratégica e atendimento personalizado
-              para quem busca comprar, vender ou investir com segurança,
-              transparência e sofisticação. CRECI Z 00000.
+              Meu trabalho é baseado em escuta, transparência e acompanhamento
+              próximo em todas as etapas — da primeira conversa à assinatura do
+              contrato. Busco entender o que realmente importa para cada cliente
+              e transformar a busca por um imóvel em uma experiência segura,
+              clara e tranquila.
             </p>
+            <p>
+              Uno conhecimento de mercado, visão estratégica e atendimento
+              personalizado para quem deseja comprar, vender ou investir em
+              imóveis com confiança e segurança.
+            </p>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(37,117,210,0.22)] transition hover:bg-brand-dark"
+            >
+              <FaWhatsapp size={18} aria-hidden />
+              WhatsApp
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-brand/20 bg-white px-6 py-3 text-sm font-semibold text-brand transition hover:border-brand hover:bg-brand/5"
+            >
+              <FaInstagram size={18} aria-hidden />
+              Instagram
+            </a>
           </div>
         </div>
       </div>

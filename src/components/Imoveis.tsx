@@ -1,4 +1,5 @@
 import { FaBath, FaBed, FaMapMarkerAlt, FaRulerCombined, FaWhatsapp } from "react-icons/fa";
+import { WHATSAPP_NUMBER } from "../constants";
 
 type Imovel = {
   id: string;
@@ -14,46 +15,46 @@ type Imovel = {
 
 const imoveis: Imovel[] = [
   {
-    id: "patio-solare",
-    nome: "Patio Solare",
-    localizacao: "Recife — PE",
-    preco: "Sob consulta",
-    metragem: "68–120 m²",
-    quartos: 2,
-    banheiros: 2,
-    tag: "Lançamento",
-    imagem:
-      "https://res.cloudinary.com/dkgjwrjpv/image/upload/f_auto,q_auto,w_900/v1786033682/patioSolare_ovjtim.webp",
-  },
-  {
-    id: "residencial-aurora",
-    nome: "Residencial Aurora",
-    localizacao: "Boa Viagem — PE",
-    preco: "A partir de R$ 680.000",
-    metragem: "85 m²",
-    quartos: 3,
-    banheiros: 2,
-    tag: "Pronto para morar",
-    imagem:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    id: "edificio-horizon",
-    nome: "Edifício Horizon",
-    localizacao: "Pina — PE",
-    preco: "A partir de R$ 920.000",
-    metragem: "112 m²",
+    id: "botanik-torre",
+    nome: "Botanik Torre",
+    localizacao: "Torre, Recife - PE",
+    preco: "A partir de R$ 779.000,00",
+    metragem: "76 m²",
     quartos: 3,
     banheiros: 3,
-    tag: "Vista mar",
+    tag: "Médio Padrão",
     imagem:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80",
+      "https://res.cloudinary.com/dkgjwrjpv/image/upload/f_auto,q_auto,w_900/v1786033695/botanikTorre_s2m18w.jpg",
+  },
+  {
+    id: "patio-hori",
+    nome: "Pátio Horí",
+    localizacao: "Caxangá, Recife - PE",
+    preco: "A partir de R$ 314.000,00",
+    metragem: "52,28 m²",
+    quartos: 2,
+    banheiros: 2,
+    tag: "Médio Padrão",
+    imagem:
+      "https://res.cloudinary.com/dkgjwrjpv/image/upload/f_auto,q_auto,w_900/v1786033693/patioHori_o2ypsg.webp",
+  },
+  {
+    id: "patio-camino",
+    nome: "Pátio Camino",
+    localizacao: "Iputinga, Recife - PE",
+    preco: "A partir de R$ 359.000,00",
+    metragem: "45,68 m²",
+    quartos: 2,
+    banheiros: 2,
+    tag: "Médio Padrão",
+    imagem:
+      "https://res.cloudinary.com/dkgjwrjpv/image/upload/f_auto,q_auto,w_900/v1786033693/patioCamino_sxxhk3.webp",
   },
 ];
 
 function whatsappImovel(imovel: Imovel) {
-  const mensagem = `Olá, Felipe! Tenho interesse no imóvel *${imovel.nome}* (${imovel.localizacao}). Gostaria de mais informações.`;
-  return `https://wa.me/5500000000000?text=${encodeURIComponent(mensagem)}`;
+  const mensagem = `Olá, Alexandre! Tenho interesse no imóvel *${imovel.nome}* (${imovel.localizacao}). Gostaria de mais informações.`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensagem)}`;
 }
 
 export default function Imoveis() {

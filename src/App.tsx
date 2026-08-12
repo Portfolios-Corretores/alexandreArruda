@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Agendamento from "./components/Agendamento";
+import Depoimentos from "./components/Depoimentos";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Imoveis from "./components/Imoveis";
@@ -13,6 +14,7 @@ function App() {
       <Hero />
       <About />
       <Imoveis />
+      <Depoimentos />
       <Agendamento />
       <Localizacao />
       <Footer />
