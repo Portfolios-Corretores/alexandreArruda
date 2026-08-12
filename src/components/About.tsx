@@ -42,8 +42,11 @@ export default function About() {
 
           <div className="mt-6 space-y-4 text-base leading-relaxed text-muted md:text-lg">
             <p>
-              Há 3 anos, atuo no mercado imobiliário ajudando pessoas a
-              encontrarem o imóvel certo para cada momento de suas vidas.
+              Há <strong className="font-bold text-ink">3 anos</strong>, atuo no
+              mercado imobiliário como especialista em{" "}
+              <strong className="font-bold text-ink">Minha Casa Minha Vida</strong>,
+              ajudando pessoas a encontrarem o imóvel certo para cada momento de
+              suas vidas.
             </p>
             <p>
               Meu trabalho é baseado em escuta, transparência e acompanhamento
