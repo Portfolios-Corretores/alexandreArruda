@@ -1,4 +1,15 @@
+import { useEffect, useRef, useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 const depoimentos = [
+  {
+    id: "nacildo-wanessa",
+    nomes: "Nacildo & Wanessa",
+    texto:
+      "Quero deixar meu agradecimento  ao melhor corretor! Sua atenção aos detalhes, paciência e transparência tornaram todo o processo extremamente leve e seguro. É visível o quanto você trabalha com dedicação e compromisso de verdade com o cliente. Excelente profissional, recomendo de olhos fechados a qualquer pessoa! Ouso dizer que não é apenas um excelente profissional, mas um verdadeiro parceiro de conquistas.",
+    imagem:
+      "https://res.cloudinary.com/dkgjwrjpv/image/upload/v1786648339/WhatsApp_Image_2026-08-13_at_15.40.14_1_qt1dfl.jpg",
+  },
   {
     id: "beatriz-geovane",
     nomes: "Beatriz & Geovane",
@@ -23,9 +34,76 @@ const depoimentos = [
     imagem:
       "https://res.cloudinary.com/dkgjwrjpv/image/upload/v1786565144/1000774221_fmllhg.jpg",
   },
+  {
+    id: "jackson-beatriz",
+    nomes: "Jackson & Beatriz",
+    texto:
+      "Encontrei meu lar em um imóvel que ficou na ponta dos dedos com a ajuda do corretor. A transparência, a agilidade e o suporte tornaram tudo muito tranquilo. Obrigado pelo excelente trabalho!",
+    imagem:
+      "https://res.cloudinary.com/dkgjwrjpv/image/upload/v1786648339/WhatsApp_Image_2026-08-13_at_15.40.14_2_msx3ap.jpg",
+  },
+  {
+    id: "angela-ginaldo",
+    nomes: "Ângela & Ginaldo",
+    texto:
+      "Agradeço a você por toda a atenção e dedicação que você demonstrou durante todo o processo. Sua profissionalismo e comprometimento tornaram a busca por um lar muito tranquila e agradável. Obrigado pelo excelente trabalho!",
+    imagem:
+      "https://res.cloudinary.com/dkgjwrjpv/image/upload/v1786648339/WhatsApp_Image_2026-08-13_at_15.40.14_ebnugn.jpg",
+  },
+  {
+    id: "joseane-familia",
+    nomes: "Joseane & Família",
+    texto:
+      "Obrigado por toda a dedicação e atenção que você demonstrou durante todo o processo. Sua profissionalismo e comprometimento tornaram a busca por um lar muito tranquila e agradável. Obrigado pelo excelente trabalho!",
+    imagem:
+      "https://res.cloudinary.com/dkgjwrjpv/image/upload/v1786648339/WhatsApp_Image_2026-08-13_at_15.40.13_fyqtbu.jpg",
+  },
+  {
+    id: "jadmas-julio",
+    nomes: "Jadmas & Júlio",
+    texto:
+      "Quero agradecer ao Alexandre pela dedicação e atenção que ele demonstrou durante todo o processo. Sua profissionalismo e comprometimento tornaram a busca por um lar muito tranquila e agradável. Obrigado pelo excelente trabalho!",
+    imagem:
+      "https://res.cloudinary.com/dkgjwrjpv/image/upload/v1786648340/WhatsApp_Image_2026-08-13_at_15.40.15_b7u1pt.jpg",
+  },
 ] as const;
 
 export default function Depoimentos() {
+  const scrollerRef = useRef<HTMLUListElement>(null);
+  const [podeVoltar, setPodeVoltar] = useState(false);
+  const [podeAvancar, setPodeAvancar] = useState(true);
+
+  const atualizarSetas = () => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const maxScroll = el.scrollWidth - el.clientWidth;
+    setPodeVoltar(el.scrollLeft > 4);
+    setPodeAvancar(el.scrollLeft < maxScroll - 4);
+  };
+
+  const rolar = (direcao: -1 | 1) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const card = el.querySelector("li");
+    const gap = 24;
+    const passo = card ? card.getBoundingClientRect().width + gap : 320;
+    el.scrollBy({ left: direcao * passo, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+
+    atualizarSetas();
+    el.addEventListener("scroll", atualizarSetas, { passive: true });
+    window.addEventListener("resize", atualizarSetas);
+
+    return () => {
+      el.removeEventListener("scroll", atualizarSetas);
+      window.removeEventListener("resize", atualizarSetas);
+    };
+  }, []);
+
   return (
     <section
       id="depoimentos"
@@ -38,25 +116,59 @@ export default function Depoimentos() {
       />
 
       <div className="relative mx-auto max-w-6xl">
-        <div className="max-w-xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand">
-            Depoimentos
-          </p>
-          <h2
-            id="depoimentos-titulo"
-            className="mt-4 font-display text-[clamp(1.75rem,3.2vw,2.5rem)] font-extrabold leading-[1.05] tracking-[-0.03em] text-ink"
-          >
-            Histórias de quem realizou o sonho
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted md:text-lg">
-            Famílias que confiaram no Alexandre Arruda para conquistar o
-            próprio imóvel.
-          </p>
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div className="max-w-xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand">
+              Depoimentos
+            </p>
+            <h2
+              id="depoimentos-titulo"
+              className="mt-4 font-display text-[clamp(1.75rem,3.2vw,2.5rem)] font-extrabold leading-[1.05] tracking-[-0.03em] text-ink"
+            >
+              Histórias de quem realizou o sonho
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted md:text-lg">
+              Famílias que confiaram no Alexandre Arruda para conquistar o
+              próprio imóvel.
+            </p>
+          </div>
+
+          <div className="flex items-center gap-3 self-start sm:self-end">
+            <span className="text-sm font-medium text-muted">
+              Para ver mais depoimentos
+            </span>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => rolar(-1)}
+                disabled={!podeVoltar}
+                className="flex size-10 cursor-pointer items-center justify-center rounded-full border border-brand/20 text-brand transition hover:border-brand hover:bg-brand/5 disabled:cursor-not-allowed disabled:opacity-35 disabled:hover:border-brand/20 disabled:hover:bg-transparent"
+                aria-label="Depoimentos anteriores"
+              >
+                <FaChevronLeft aria-hidden />
+              </button>
+              <button
+                type="button"
+                onClick={() => rolar(1)}
+                disabled={!podeAvancar}
+                className="flex size-10 cursor-pointer items-center justify-center rounded-full border border-brand/20 text-brand transition hover:border-brand hover:bg-brand/5 disabled:cursor-not-allowed disabled:opacity-35 disabled:hover:border-brand/20 disabled:hover:bg-transparent"
+                aria-label="Próximos depoimentos"
+              >
+                <FaChevronRight aria-hidden />
+              </button>
+            </div>
+          </div>
         </div>
 
-        <ul className="mt-14 grid gap-6 md:grid-cols-3 md:gap-7">
+        <ul
+          ref={scrollerRef}
+          className="mt-14 flex items-stretch snap-x snap-mandatory gap-6 overflow-x-auto overflow-y-hidden scroll-smooth scrollbar-none"
+        >
           {depoimentos.map((item) => (
-            <li key={item.id}>
+            <li
+              key={item.id}
+              className="w-full shrink-0 snap-start sm:w-[calc((100%-1.5rem)/2)] md:w-[calc((100%-3rem)/3)]"
+            >
               <article className="group relative flex min-h-112 flex-col justify-end overflow-hidden rounded-[1.75rem] sm:min-h-120">
                 <img
                   src={item.imagem}
