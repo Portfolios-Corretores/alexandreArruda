@@ -11,14 +11,6 @@ const depoimentos = [
       "https://res.cloudinary.com/dkgjwrjpv/image/upload/v1786648339/WhatsApp_Image_2026-08-13_at_15.40.14_1_qt1dfl.jpg",
   },
   {
-    id: "beatriz-geovane",
-    nomes: "Beatriz & Geovane",
-    texto:
-      "Sonho realizado com acompanhamento próximo em cada etapa. Atendimento humano, claro e seguro do começo ao fim.",
-    imagem:
-      "https://res.cloudinary.com/dkgjwrjpv/image/upload/v1786565145/1000774231_kgljqw.jpg",
-  },
-  {
     id: "kimberly-pedro",
     nomes: "Kimberly & Pedro",
     texto:
@@ -38,7 +30,7 @@ const depoimentos = [
     id: "jackson-beatriz",
     nomes: "Jackson & Beatriz",
     texto:
-      "Encontrei meu lar em um imóvel que ficou na ponta dos dedos com a ajuda do corretor. A transparência, a agilidade e o suporte tornaram tudo muito tranquilo. Obrigado pelo excelente trabalho!",
+      "Encontrei meu lar em um imóvel que ficou na ponta dos dedos com a ajuda do corretor. Transparência, agilidade e suporte tornaram tudo muito tranquilo. Hoje estamos em casa e muito gratos.",
     imagem:
       "https://res.cloudinary.com/dkgjwrjpv/image/upload/v1786648339/WhatsApp_Image_2026-08-13_at_15.40.14_2_msx3ap.jpg",
   },
@@ -46,7 +38,7 @@ const depoimentos = [
     id: "angela-ginaldo",
     nomes: "Ângela & Ginaldo",
     texto:
-      "Agradeço a você por toda a atenção e dedicação que você demonstrou durante todo o processo. Sua profissionalismo e comprometimento tornaram a busca por um lar muito tranquila e agradável. Obrigado pelo excelente trabalho!",
+      "Desde o primeiro contato sentimos segurança. Você explicou cada etapa com calma e sempre esteve disponível para tirar nossas dúvidas. A busca pelo lar ficou leve justamente por essa parceria.",
     imagem:
       "https://res.cloudinary.com/dkgjwrjpv/image/upload/v1786648339/WhatsApp_Image_2026-08-13_at_15.40.14_ebnugn.jpg",
   },
@@ -54,7 +46,7 @@ const depoimentos = [
     id: "joseane-familia",
     nomes: "Joseane & Família",
     texto:
-      "Obrigado por toda a dedicação e atenção que você demonstrou durante todo o processo. Sua profissionalismo e comprometimento tornaram a busca por um lar muito tranquila e agradável. Obrigado pelo excelente trabalho!",
+      "Foi emocionante ver a família reunida na entrega das chaves. O Alexandre cuidou de tudo com paciência e respeito, sempre pensando no que era melhor para nós. Recomendamos de coração.",
     imagem:
       "https://res.cloudinary.com/dkgjwrjpv/image/upload/v1786648339/WhatsApp_Image_2026-08-13_at_15.40.13_fyqtbu.jpg",
   },
@@ -62,7 +54,7 @@ const depoimentos = [
     id: "jadmas-julio",
     nomes: "Jadmas & Júlio",
     texto:
-      "Quero agradecer ao Alexandre pela dedicação e atenção que ele demonstrou durante todo o processo. Sua profissionalismo e comprometimento tornaram a busca por um lar muito tranquila e agradável. Obrigado pelo excelente trabalho!",
+      "O Alexandre acompanhou cada detalhe da negociação e nos deu clareza para decidir com confiança. Sem pressa, sem enrolação — só um trabalho honesto até fecharmos o imóvel.",
     imagem:
       "https://res.cloudinary.com/dkgjwrjpv/image/upload/v1786648340/WhatsApp_Image_2026-08-13_at_15.40.15_b7u1pt.jpg",
   },
