@@ -1,7 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
+const depoimentoVideo =
+  "https://res.cloudinary.com/dkgjwrjpv/video/upload/v1787081534/depoimentoEmVideo_xk1sxb.mp4";
+
 const depoimentos = [
+  {
+    id: "lucas-hayrqui",
+    nomes: "Lucas Hayrqui",
+    texto:
+      "Receber as chaves do meu imóvel foi a confirmação de um sonho. O Alexandre conduziu tudo com atenção e segurança, do primeiro contato até a entrega.",
+    imagem:
+      "https://res.cloudinary.com/dkgjwrjpv/image/upload/v1787081533/WhatsApp_Image_2026-08-17_at_19.50.40_x3jk46.jpg",
+  },
   {
     id: "nacildo-wanessa",
     nomes: "Nacildo & Wanessa",
@@ -156,6 +167,18 @@ export default function Depoimentos() {
           ref={scrollerRef}
           className="mt-14 flex items-stretch snap-x snap-mandatory gap-6 overflow-x-auto overflow-y-hidden scroll-smooth scrollbar-none"
         >
+          <li className="w-full shrink-0 snap-start sm:w-[calc((100%-1.5rem)/2)] md:w-[calc((100%-3rem)/3)]">
+            <article className="relative flex min-h-112 overflow-hidden rounded-[1.75rem] bg-ink sm:min-h-120">
+              <video
+                src={depoimentoVideo}
+                className="absolute inset-0 h-full w-full object-cover"
+                controls
+                playsInline
+                preload="metadata"
+                aria-label="Depoimento em vídeo de cliente"
+              />
+            </article>
+          </li>
           {depoimentos.map((item) => (
             <li
               key={item.id}
