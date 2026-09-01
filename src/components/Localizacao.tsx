@@ -5,8 +5,8 @@ const ENDERECO = "Av. Caxangá, 5405 - Várzea, Recife - PE, 50740-000";
 const GOOGLE_MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Av.+Caxang%C3%A1,+5405+-+V%C3%A1rzea,+Recife+-+PE,+50740-000";
 
-const GOOGLE_MAPS_EMBED_URL =
-  "https://www.google.com/maps?q=Av.+Caxang%C3%A1,+5405+-+V%C3%A1rzea,+Recife+-+PE,+50740-000&output=embed";
+const FACHADA_IMAGE =
+  "https://res.cloudinary.com/dkgjwrjpv/image/upload/f_auto,q_auto,w_1200/v1786108093/fachadaNewPalace_zjk0df.webp";
 
 export default function Localizacao() {
   return (
@@ -58,13 +58,12 @@ export default function Localizacao() {
         </div>
 
         <div className="overflow-hidden rounded-[1.75rem] bg-white shadow-[0_16px_40px_rgba(12,18,34,0.08)]">
-          <iframe
-            title="Localização no Google Maps — New Palace Imobiliária"
-            src={GOOGLE_MAPS_EMBED_URL}
-            className="aspect-4/3 w-full border-0 lg:aspect-auto lg:min-h-90"
+          <img
+            src={FACHADA_IMAGE}
+            alt="Fachada da New Palace Imobiliária, na Av. Caxangá"
+            className="aspect-4/3 w-full object-cover"
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            allowFullScreen
+            decoding="async"
           />
         </div>
       </div>

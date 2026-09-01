@@ -42,10 +42,10 @@ export default function About() {
 
           <div className="mt-6 space-y-4 text-base leading-relaxed text-muted md:text-lg">
             <p>
-              Há <strong className="font-bold text-ink">3 anos</strong>, atuo no
+              Com vasta experiência, atuo no
               mercado imobiliário como especialista em{" "}
               <strong className="font-bold text-ink">Minha Casa Minha Vida</strong>,
-              ajudando pessoas a encontrarem o imóvel certo para cada momento de
+              ajudando pessoas a encontrar o imóvel certo para cada momento de
               suas vidas.
             </p>
             <p>

@@ -19,8 +19,15 @@ export default function Hero() {
 
       <div className="relative z-10 flex min-h-dvh items-center px-6 pb-14 pt-28 md:px-10 lg:px-14 xl:px-20 xl:pb-24 xl:pt-35">
         <div className="max-w-xl">
+          <p
+            className="mt-20 inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm md:text-[0.8rem]"
+            style={{ animation: "hero-rise 0.9s ease 0.08s both" }}
+          >
+            Recife e Região Metropolitana
+          </p>
+
           <h1
-            className="mt-20 font-display text-[clamp(2rem,4.5vw,5rem)] font-extrabold uppercase leading-[0.92] tracking-[-0.03em] text-white"
+            className="mt-5 font-display text-[clamp(2rem,4.5vw,5rem)] font-extrabold uppercase leading-[0.92] tracking-[-0.03em] text-white"
             style={{ animation: "hero-rise 0.9s ease 0.15s both" }}
           >
             Alexandre
@@ -32,7 +39,7 @@ export default function Hero() {
             className="mt-6 max-w-xl text-base leading-relaxed text-white/85 md:text-lg"
             style={{ animation: "hero-rise 0.9s ease 0.28s both" }}
           >
-            Imóveis selecionados em Recife 
+            Imóveis selecionados em Recife e Região Metropolitana
             para quem valoriza localização, exclusividade e qualidade em cada detalhe.
           </p>
 

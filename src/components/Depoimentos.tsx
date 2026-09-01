@@ -52,7 +52,7 @@ const depoimentos = [
       "Desde o primeiro contato sentimos segurança. Você explicou cada etapa com calma e sempre esteve disponível para tirar nossas dúvidas. A busca pelo lar ficou leve justamente por essa parceria.",
     imagem:
       "https://res.cloudinary.com/dkgjwrjpv/image/upload/v1786648339/WhatsApp_Image_2026-08-13_at_15.40.14_ebnugn.jpg",
-  },
+  },/*
   {
     id: "joseane-familia",
     nomes: "Joseane & Família",
@@ -60,7 +60,7 @@ const depoimentos = [
       "Foi emocionante ver a família reunida na entrega das chaves. O Alexandre cuidou de tudo com paciência e respeito, sempre pensando no que era melhor para nós. Recomendamos de coração.",
     imagem:
       "https://res.cloudinary.com/dkgjwrjpv/image/upload/v1786648339/WhatsApp_Image_2026-08-13_at_15.40.13_fyqtbu.jpg",
-  },
+  },*/
   {
     id: "jadmas-julio",
     nomes: "Jadmas & Júlio",
